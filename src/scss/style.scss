@@ -1,0 +1,9 @@
+$bg: royalblue;
+$fg: white;
+$font: 'OperatorMono-Light', Menlo, monospace;
+
+body {
+  background: $bg;
+  color: $fg;
+  font-family: $font;
+}
