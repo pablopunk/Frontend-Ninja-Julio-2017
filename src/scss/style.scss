@@ -1,9 +1,7 @@
-$bg: royalblue;
-$fg: white;
-$font: 'OperatorMono-Light', Menlo, monospace;
-
-body {
-  background: $bg;
-  color: $fg;
-  font-family: $font;
-}
+@import url('https://fonts.googleapis.com/css?family=Merienda|PT+Sans');
+@import "reset";
+@import "variables";
+@import "responsive-utils";
+@import "html-tags";
+@import "components/header";
+@import "components/songs-list";

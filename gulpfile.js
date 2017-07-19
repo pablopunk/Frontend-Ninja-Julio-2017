@@ -7,7 +7,7 @@ const browser = require('browser-sync').create()
 gulp.task('default', ['sass', 'html'], () => {
   browser.init({ server: 'dist/' })
   gulp.watch(['src/scss/*.scss', 'src/scss/**/*.scss'], ['sass'])
-  gulp.watch(['src/*.html'], ['html'])
+  gulp.watch(['src/*.html', 'src/**/*.html'], ['html'])
 })
 
 gulp.task('sass', () => {

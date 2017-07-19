@@ -1,0 +1,28 @@
+$main-font: 'PT Sans', sans-serif;
+$title-font: 'Merienda';
+$body-font: $main-font;
+
+$font-size-base: 15px;
+$font-size-small: $font-size-base - 5px;
+$font-size-large: $font-size-base + 5px;
+$font-size-h1: $font-size-base + 15px;
+$font-size-h2: $font-size-base + 12px;
+$font-size-h3: $font-size-base + 9px;
+$font-size-h4: $font-size-base + 6px;
+$font-size-h5: $font-size-base + 3px;
+$font-size-h6: $font-size-base;
+
+$color-amazing: #F8695B;
+$color-royal: royalblue;
+$color-sidonia: #FDAA10;
+$color-less: white;
+$color-silver: whitesmoke;
+$color-gray: #1a1a1a;
+
+$main-font-color: $color-gray;
+$links-color: $color-amazing;
+
+$mobile-portrait-width: 375px;
+$mobile-landscape-width: 667px;
+$tablet-portrait-width: 768px;
+$tablet-landscape-width: 1024px;

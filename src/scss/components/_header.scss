@@ -1,0 +1,18 @@
+.web-header {
+  box-sizing: border-box;
+  background: fade-out($color-royal, 0.05);
+  padding: 15px;
+  color: $color-silver;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  &:hover {
+    background: $color-royal;
+  }
+  .web-title {
+    font-weight: bold;
+    font-size: $font-size-large;
+    font-family: $title-font;
+  }
+}
