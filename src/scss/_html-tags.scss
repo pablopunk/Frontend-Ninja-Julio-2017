@@ -3,16 +3,4 @@ body {
   font-family: $body-font;
   font-size: $font-size-base;
   color: $main-font-color;
-
-  @include if-mobile-landscape {
-    background: darkblue;
-  }
-
-  @include if-tablet-portrait {
-    background: orangered;
-  }
-
-  @include if-tablet-landscape {
-    background: hotpink;
-  }
 }
