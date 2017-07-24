@@ -1,6 +1,8 @@
 import SongService from './SongService'
-const $ = window.$ = window.jQuery = require('jquery')
-const songService = new SongService()
+import jQuery from 'jquery'
+
+const $ = window.$ = window.jQuery = jQuery
+const songService = new SongService('/songs')
 
 const getHtmlForSong = song => `
   <article class="song">
@@ -11,9 +13,7 @@ const getHtmlForSong = song => `
 `
 
 const setUiStatus = status => $('.songs-list').addClass(status)
-
 const removeUiStatus = status => $('.songs-list').removeClass(status)
-
 const addSongToView = song => $('.songs-list .ui-status.ideal').append(getHtmlForSong(song))
 
 songService.list(songs => {
