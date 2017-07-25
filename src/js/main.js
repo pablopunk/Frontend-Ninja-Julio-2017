@@ -1,15 +1,12 @@
 import SongService from './SongService'
 import UI from './ui'
+import SongsList from './SongsList'
+import SongsFormManager from './SongFormManager'
+
 const songService = new SongService('/songs')
 const ui = new UI('.songs-list')
+const songsList = new SongsList(songService, ui)
+const songsFormManager = new SongsFormManager('.song-form', songService)
 
-songService.list(songs => {
-  if (!songs.length) {
-    ui.setEmpty()
-    return
-  }
-  for (const song of songs) {
-    ui.addSongToView(song)
-  }
-  ui.setIdeal()
-}).fail(ui.setError)
+songsList.init()
+songsFormManager.init()

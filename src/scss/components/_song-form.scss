@@ -1,0 +1,33 @@
+
+.song-form {
+  .ui-status {
+    &.error {
+      text-align: center;
+      background-color: $form-error-background-color;
+      color: $form-error-font-color;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      display: none;
+    }
+    &.loading {
+      text-align: center;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      display: none;
+    }
+  }
+
+  &.error .ui-status.error { display: block }
+  &.loading .ui-status.loading { display: block }
+
+  @include if-tablet-landscape {
+    .form-control-group {
+      width: 49%;
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 0 5px;
+    }
+  }
+}
+

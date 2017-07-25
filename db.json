@@ -1,9 +1,40 @@
 {
   "songs": [
-    { "id": 1 , "title": "Two wrongs don't make a right but three rights make a left", "artist": "Zebrahead", "coverUrl": "https://upload.wikimedia.org/wikipedia/en/f/f0/Phoenix_higher_resolution.jpg" },
-    { "id": 2 , "title": "Carousel", "artist": "blink-182", "coverUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Blink-182_-_Cheshire_Cat_cover.jpg/220px-Blink-182_-_Cheshire_Cat_cover.jpg" },
-    { "id": 3 , "title": "Flight Of Apollo", "artist": "Angels & Airwaves", "coverUrl": "https://upload.wikimedia.org/wikipedia/en/a/aa/Angels_%26_Airwaves_-_Love_Part_Two_cover.jpg" },
-    { "id": 4 , "title": "Playing Dead", "artist": "Chunk! No, Captain Chunk!", "coverUrl": "https://upload.wikimedia.org/wikipedia/en/6/60/GetLostFindYourself_ChunkNoCaptainChunk.jpg" },
-    { "id": 5 , "title": "All Star", "artist": "Smash Mouth", "coverUrl": "https://upload.wikimedia.org/wikipedia/en/1/16/All_star.jpg" }
+    {
+      "id": 1,
+      "title": "Two wrongs don't make a right but three rights make a left",
+      "artist": "Zebrahead",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/f/f0/Phoenix_higher_resolution.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Carousel",
+      "artist": "blink-182",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Blink-182_-_Cheshire_Cat_cover.jpg/220px-Blink-182_-_Cheshire_Cat_cover.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Flight Of Apollo",
+      "artist": "Angels & Airwaves",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/a/aa/Angels_%26_Airwaves_-_Love_Part_Two_cover.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Playing Dead",
+      "artist": "Chunk! No, Captain Chunk!",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/6/60/GetLostFindYourself_ChunkNoCaptainChunk.jpg"
+    },
+    {
+      "id": 5,
+      "title": "All Star",
+      "artist": "Smash Mouth",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/1/16/All_star.jpg"
+    },
+    {
+      "artist": "New Found Glory",
+      "title": "Happy Being Misserable",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/7/7a/Makes_Me_Sick_by_New_Found_Glory.jpg",
+      "id": 6
+    }
   ]
 }

@@ -1,11 +1,5 @@
 import $ from 'jquery'
 
-/**
- * Rest API interface
- * All methods return an $.ajax() object,
- * so you can handle the callbacks the same
- * way you do it with jQuery AJAX
- */
 export default class SongService {
   constructor (url = '/songs') {
     this.url = url

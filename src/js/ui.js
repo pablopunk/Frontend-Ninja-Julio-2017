@@ -2,14 +2,6 @@ import jQuery from 'jquery'
 
 const $ = window.$ = window.jQuery = jQuery
 
-const getHtmlForSong = song => `
-  <article class="song">
-    <img class="cover" src="${song.coverUrl}" alt="cover">
-    <div class="artist">${song.artist}</div>
-    <div class="title">${song.title}</div>
-  </article>
-`
-
 export default class UI {
   constructor (selector) {
     this.element = $(selector)
@@ -40,7 +32,23 @@ export default class UI {
     return this.element.removeClass(this.getClasses()).addClass('ideal')
   }
 
-  addSongToView (song) {
-    return this.element.append(getHtmlForSong(song))
+  setEmptyHtml (html) {
+    return this.element.find('.ui-status.empty').html(html)
+  }
+
+  setLoadingHtml (html) {
+    return this.element.find('.ui-status.loading').html(html)
+  }
+
+  setPartialHtml (html) {
+    return this.element.find('.ui-status.partial').html(html)
+  }
+
+  setErrorHtml (html) {
+    return this.element.find('.ui-status.error').html(html)
+  }
+
+  setIdealHtml (html) {
+    return this.element.find('.ui-status.ideal').html(html)
   }
 }

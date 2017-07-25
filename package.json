@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "server": "json-server --static ./dist --port 3100 db.json",
-    "dev": "gulp"
+    "dev": "gulp",
+    "test": "standard"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "gulp-tap": "^1.0.1",
     "gulp-uglify": "^3.0.0",
     "node-sass": "^4.5.3",
-    "postcss": "^6.0.8"
+    "postcss": "^6.0.8",
+    "standard": "^10.0.2"
   }
 }
