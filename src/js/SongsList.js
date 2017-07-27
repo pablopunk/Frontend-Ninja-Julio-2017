@@ -1,4 +1,3 @@
-
 const getHtmlForSong = song => `
 <article class="song">
   <img class="cover" src="${song.cover}" alt="cover">
@@ -8,12 +7,14 @@ const getHtmlForSong = song => `
 `
 
 export default class SongsList {
-  constructor (songService, ui) {
+  constructor (songService, ui, pubsub) {
     this.songService = songService
     this.ui = ui
+    this.pubsub = pubsub
   }
   init () {
     this.loadSongs()
+    this.pubsub.subscribe('new-song', this.loadSongs.bind(this))
   }
   loadSongs () {
     this.songService.list(songs => {

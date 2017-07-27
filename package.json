@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/pablopunk/Frontend-Ninja-Julio-2017#readme",
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "pubsub-js": "^1.5.7"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

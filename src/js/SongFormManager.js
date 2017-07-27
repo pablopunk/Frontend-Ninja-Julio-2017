@@ -1,9 +1,10 @@
 import UI from './ui'
 
 export default class SongFormManager extends UI {
-  constructor (elementSelector, songsService) {
+  constructor (elementSelector, songsService, pubsub) {
     super(elementSelector)
     this.songsService = songsService
+    this.pubsub = pubsub
   }
 
   init () {
@@ -38,12 +39,13 @@ export default class SongFormManager extends UI {
 
   send () {
     this.setLoading()
-    this.songsService.create({
+    const song = {
       'artist': this.element.find('#artist').val(),
       'title': this.element.find('#title').val(),
       'cover': this.element.find('#cover').val()
-    }, () => {
-      // TODO: reload songs
+    }
+    this.songsService.create(song, () => {
+      this.pubsub.publish('new-song', song)
       this.element[0].reset()
       this.setIdeal()
     }).fail(this.setError)
