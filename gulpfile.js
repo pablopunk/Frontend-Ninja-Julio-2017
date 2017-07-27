@@ -8,12 +8,14 @@ const sourcemaps = require('gulp-sourcemaps')
 const htmlmin = require('gulp-htmlmin')
 const uglify = require('gulp-uglify')
 const postcss = require('gulp-postcss')
+const imagemin = require('gulp-imagemin')
+const responsive = require('gulp-responsive')
 const browser = require('browser-sync').create()
 const browserify = require('browserify')
 const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
 
-gulp.task('default', ['sass', 'html', 'js'], () => {
+gulp.task('default', ['sass', 'html', 'js', 'img'], () => {
   browser.init({ proxy: 'http://127.0.0.1:3100/', browser: 'google chrome' })
   gulp.watch(['src/scss/*.scss', 'src/scss/**/*.scss'], ['sass'])
   gulp.watch(['src/*.html', 'src/**/*.html'], ['html'])
@@ -52,4 +54,17 @@ gulp.task('js', () => {
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('dist/'))
   .pipe(browser.stream())
+})
+
+gulp.task('img', () => {
+  gulp.src('src/img/*')
+  .pipe(responsive({ // generamos las versiones responsive
+    '*': [
+      {width: 150, rename: {suffix: '-150px'}},
+      {width: 250, rename: {suffix: '-250px'}},
+      {width: 300, rename: {suffix: '-300px'}}
+    ]
+  }))
+  .pipe(imagemin()) // optimizamos el peso de las imágenes
+  .pipe(gulp.dest('dist/img/'))
 })
