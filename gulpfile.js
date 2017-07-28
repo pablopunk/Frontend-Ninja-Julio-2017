@@ -15,12 +15,14 @@ const browserify = require('browserify')
 const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
 
-gulp.task('default', ['sass', 'html', 'js', 'img'], () => {
+gulp.task('default', ['build'], () => {
   browser.init({ proxy: 'http://127.0.0.1:3100/', browser: 'google chrome' })
   gulp.watch(['src/scss/*.scss', 'src/scss/**/*.scss'], ['sass'])
   gulp.watch(['src/*.html', 'src/**/*.html'], ['html'])
   gulp.watch(['src/js/*.js', 'src/js/**/*.js'], ['js'])
 })
+
+gulp.task('build', ['sass', 'html', 'js', 'img'], () => console.log('building...'))
 
 gulp.task('sass', () => {
   gulp.src('./src/scss/style.scss')

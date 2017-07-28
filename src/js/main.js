@@ -11,4 +11,3 @@ const songsFormManager = new SongsFormManager('.song-form', songService, pubsub)
 
 songsList.init()
 songsFormManager.init()
-

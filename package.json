@@ -1,11 +1,12 @@
 {
-  "name": "Frontend-Ninja-Julio-2017",
+  "name": "pablotify",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "json-server --static ./dist --port 3100 db.json",
+    "start": "json-server --static ./dist --port 3100 db.json",
     "dev": "gulp",
+    "build": "gulp build",
     "test": "standard"
   },
   "repository": {
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/pablopunk/Frontend-Ninja-Julio-2017#readme",
   "dependencies": {
     "jquery": "^3.2.1",
+    "json-server": "^0.11.2",
     "pubsub-js": "^1.5.7"
   },
   "devDependencies": {
